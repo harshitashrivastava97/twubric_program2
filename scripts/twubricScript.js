@@ -1,3 +1,7 @@
+/**
+ * @author Harshita Shrivastava
+ */
+
 angular.module('TwubricModule', [])
     .controller('TwubricController', ['$scope', 'jsonLoader', function($scope, jsonLoader) {
         jsonLoader.loadData('values.json')
@@ -29,7 +33,7 @@ angular.module('TwubricModule', [])
 
                 scope.$watch('twitterAccountsInfo', function(newVal, oldVal) {
                     $container.isotope('reloadItems').isotope({ sortBy: 'original-order' }); 
-                    // init datepicker
+                    /**init datepicker */ 
                     $('#startDateField').datepicker("setDate", "Jan 1, 2011");
                     $('#endDateField').datepicker("setDate", "Dec 31, 2015");
                     $('#endDateField').datepicker({ 
